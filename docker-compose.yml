@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:16
+    container_name: sql-performance-db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: lab_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+      - ./init:/docker-entrypoint-initdb.d # 初期データを自動投入するための設定
