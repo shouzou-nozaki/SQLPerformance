@@ -1,0 +1,1 @@
+EXPLAIN ANALYZE SELECT * FROM users WHERE name = 'User_999999';
